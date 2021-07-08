@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<TextView
+        android:id="@+id/tvRec"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="ALWAR"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:background="@color/cardview_dark_background"/>-->
+   <!-- <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp"/>-->
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinner"
+        style="@android:style/Widget.Spinner.DropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        app:hintText="@string/action_searchForCities" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDaily"
+        android:background="@drawable/spinner_background"
+        android:layout_below="@id/spinner"
+        android:text="5 Days Forecast"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWeather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvDaily" />
+
+</RelativeLayout>
